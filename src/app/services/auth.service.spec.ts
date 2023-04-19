@@ -47,7 +47,7 @@ describe('(3) Prueba a "AuthService"', () => {
 
   });
 
-  it(`Deberia retornar error 409`, (done: DoneFn) => {
+  it("Deberia retornar error 409", (done: DoneFn) => {
     //TODO: Mock de datos!
 
     const mockUserCredentials = {
