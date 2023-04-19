@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 //TODO: "spec.ts <--"
 //TODO: 😨 es la sintaxis de Jasmin!
 
-describe(`(1) TEST del componente "AppComponent"`, () => {
+describe('(1) TEST del componente "AppComponent"', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
