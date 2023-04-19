@@ -8,53 +8,48 @@ import { AppComponent } from './app.component';
 //TODO: 😨 es la sintaxis de Jasmin!
 
 describe(`(1) TEST del componente "AppComponent"`, () => {
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         ReactiveFormsModule,
         FormsModule,
-        HttpClientTestingModule//TODO: <-----
+        HttpClientTestingModule, //TODO: <-----
       ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
     }).compileComponents();
-
   });
 
-  //TODO:Aislado! 
+  //TODO:Aislado!
   it('Debe de existir el AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance
+    const app = fixture.componentInstance;
     expect(app).toBeTruthy(); //TODO: ✔
   });
 
-  //TODO:Aislado! 
+  //TODO:Aislado!
   it('Debe retornar formulario invalido', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance
-    fixture.detectChanges() //TODO: <---------------
+    const app = fixture.componentInstance;
+    fixture.detectChanges(); //TODO: <---------------
 
-    const email = app.form.controls['email']
-    email.setValue('leifer33@gmail.com')
+    const email = app.form.controls['email'];
+    email.setValue('leifer33@gmail.com');
 
     expect(app.form.invalid).toBeTrue(); //TODO: ✔
   });
 
   it('Debe retornar formulario valido', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance
-    fixture.detectChanges()
+    const app = fixture.componentInstance;
+    fixture.detectChanges();
 
-    let email = app.form.controls['email']
-    let password = app.form.controls['password']
-    let result = app.form.controls['result']
+    let email = app.form.controls['email'];
+    let password = app.form.controls['password'];
+    let result = app.form.controls['result'];
 
-    email.setValue('leifer33@gmail.com')
-    password.setValue('123456')
-    result.setValue('1')
-
+    email.setValue('leifer33@gmail.com');
+    password.setValue('123456');
+    result.setValue('1');
 
     expect(app.form.invalid).toBeFalse(); //TODO: ✔
   });
@@ -76,5 +71,4 @@ describe(`(1) TEST del componente "AppComponent"`, () => {
   //   const testData = { user: 1 }
   //   expect(app.isCheck).toEqual(testData)
   // });
-
 });
