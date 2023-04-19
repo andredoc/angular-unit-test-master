@@ -1,4 +1,4 @@
 export interface Data {
-    title: string;
-    description: string
+  title: string;
+  description: string;
 }
