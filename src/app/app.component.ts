@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  showEmoji: boolean = false;
+  showEmoji = false;
   title = 'Ejercicio #1 Unit Testing Angular';
   subTitle = 'Estamos creando este ejercicio para comenzar a aprender sobre pruebas unitarias en componentes'
   contentEmoji = ''
